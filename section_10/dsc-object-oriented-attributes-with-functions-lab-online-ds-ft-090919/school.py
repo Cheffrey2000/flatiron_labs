@@ -15,6 +15,8 @@ class School:
 
     def sort_roster(self):
         new_dict = self.roster
+        new_dict = dict(sorted(new_dict.items(), key=lambda s: s[0]))
+        print(new_dict)
         for key in new_dict:
             new_dict[key].sort()                    
         return new_dict
